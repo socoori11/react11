@@ -27,7 +27,7 @@ export default function Guestbook() {
     if (!name || !message) return;
 
     try {
-      await fetch('http://localhost:3001/api/messages', {
+      await fetch('https://reactguest-279200547179.us-central1.run.app/api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, message }),
