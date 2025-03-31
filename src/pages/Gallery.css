@@ -1,0 +1,125 @@
+.gallery-container {
+  padding-top: 100px;
+}
+
+/* 흐르는 이미지 */
+.scrolling-images {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.scroll-track {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+}
+.scroll-track img {
+  width: 300px;
+  margin-right: 20px;
+  border-radius: 12px;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 페이드 섹션 */
+.fade-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  padding: 50px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  gap: 40px;
+}
+.fade-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-img-box {
+  flex: 1;
+}
+.fade-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.fade-text {
+  flex: 1;
+  color: #222;
+}
+.fade-text h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+/* 모이는 이미지 섹션 */
+.gather-section {
+  position: relative;
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+}
+
+/* 이미지 공통 */
+.gather-img {
+  position: absolute;
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+  transition: all 1.8s ease; /* ✅ 수정됨: 속도 천천히 */
+}
+
+/* ✅ 수정된 초기 위치 (살짝 흩어짐) */
+.gather-img.gather1 {
+  top: 35%;
+  left: 5%;
+}
+.gather-img.gather2 {
+  top: 42%;
+  left: 25%;
+}
+.gather-img.gather3 {
+  top: 30%;
+  left: 45%;
+}
+.gather-img.gather4 {
+  top: 45%;
+  left: 65%;
+}
+
+/* ✅ 수정된 정렬 위치 (중앙 한 줄로 모임) */
+.gather-section.gather-start .gather1 {
+  top: 40%;
+  left: 20%;
+  opacity: 1;
+}
+.gather-section.gather-start .gather2 {
+  top: 40%;
+  left: 35%;
+  opacity: 1;
+}
+.gather-section.gather-start .gather3 {
+  top: 40%;
+  left: 50%;
+  opacity: 1;
+}
+.gather-section.gather-start .gather4 {
+  top: 40%;
+  left: 65%;
+  opacity: 1;
+}
+
+/* 타이틀 */
+.gather-title {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}

@@ -1,0 +1,91 @@
+.guestbook-page {
+  margin-top: 100px;
+  padding: 40px 20px 80px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1a2e1f;
+  color: #f1f4e6;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.guestbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #2e4e3a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+}
+.guestbook-form input,
+.guestbook-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #3c5e47;
+  color: #f1f4e6;
+}
+.guestbook-form input::placeholder,
+.guestbook-form textarea::placeholder {
+  color: #c4d5c3;
+}
+.guestbook-form button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #6dbf73;
+  color: #1a2e1f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.guestbook-form button:hover {
+  background-color: #58a45e;
+}
+
+.guestbook-list {
+  list-style: none;
+  padding: 0;
+}
+.guestbook-list li {
+  background-color: #345c45;
+  margin-bottom: 15px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.guestbook-list li strong {
+  color: #aee4b8;
+}
+.guestbook-list .date {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination button {
+  padding: 6px 12px;
+  background-color: #3c5e47;
+  color: #f1f4e6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.pagination button.active {
+  background-color: #6dbf73;
+  color: #1a2e1f;
+}
+.pagination button:hover {
+  background-color: #58a45e;
+}
